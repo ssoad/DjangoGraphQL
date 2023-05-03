@@ -1,13 +1,13 @@
-import cookbook.ingredients.schema
-import cookbook.recipes.schema
+import core.ingredients.schema
+import core.recipes.schema
 import graphene
 
 from graphene_django.debug import DjangoDebug
 
 
 class Query(
-    cookbook.ingredients.schema.Query,
-    cookbook.recipes.schema.Query,
+    core.ingredients.schema.Query,
+    core.recipes.schema.Query,
     graphene.ObjectType,
 ):
     debug = graphene.Field(DjangoDebug, name="_debug")

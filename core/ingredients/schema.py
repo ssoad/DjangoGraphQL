@@ -49,3 +49,9 @@ class Query:
             return Ingredient.objects.get(name=name)
 
         return None
+    
+    class CategoryMutation(graphene.ObjectType):
+        create_category = CategoryType.Field()
+        update_category = CategoryType.Field()
+        delete_category = CategoryType.Field()
+
